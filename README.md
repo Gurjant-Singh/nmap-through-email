@@ -56,10 +56,11 @@ Body of email:-  ip={192.168.1.1,192.168.1.2} OR
 ### Receiving Result 
 
 Result will be recieved in 3 files. 
+```
 -Input file (Contain the scan list of ips/domains)
 -Output file (Contain the result of scan in text file)
 -Outout file (Contain the result as XML format)
-
+```
 ## Authors
 
 * **Gurjant Singh** - *Security Researcher*
