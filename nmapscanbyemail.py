@@ -54,7 +54,6 @@ def deletefile(filename,result_filename1,result_filename2):
 #Creating a file for nmap input
 def wirte_tofile(iplist,subject,From):
 	print '[*]Creating a file..'
-	print iplist
 	filename= 'input_'+str(random.randrange(1,1000000,3))+'.txt'
 	with open(filename, 'w') as output:
 		for item in iplist:
@@ -127,7 +126,7 @@ def startscan(subject,From,filename):
 		print '[*]Starting Namp Scan'
 		result_filename1= 'result_xml_'+str(random.randrange(1,1000000,2))+'.xml'
 		result_filename2= 'result_text_'+str(random.randrange(1,1000000,3))+'.txt'
-		command='sudo '+subject+' -iL '+'./'+str(filename)+' -oX '+result_filename1 +' -o '+result_filename2
+		command=subject+' -iL '+'./'+str(filename)+' -oX '+result_filename1 +' -o '+result_filename2
 		process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
 		process.wait()
 		send_result(subject,From,filename,result_filename1,result_filename2)
